@@ -1,0 +1,133 @@
+class A
+{
+	A();  //default constructor
+	A(const A&) //copy constructor C++ has been writing this for us. 
+	A& operator= (const A&); /assignment operator
+	~A(); //default constructor written by C++
+}
+
+will use new today to allocate memory 
+
+any kind of constructor will need to allocate memory //use new
+
+class STACK
+{
+
+private:
+int _top;
+int _max;
+int _data;
+
+
+
+
+}
+
+Stack::Stack (int max) 
+: _top(o), _max(max), _data(new int[_max]) {}
+
+STACK:: ~ Stack()
+{
+	delete[] _data;		//array delete
+}
+
+extremely popular interview question
+Stack::operator= (const Stack& other)		//assignment operator 
+{
+	if(this != &other)
+	{
+	copy(other);			//copy from other
+	}
+	return *this;			
+}
+
+
+Stack::Stack ( const Stack& other)
+{
+
+	copy(other);
+}
+
+the copy constructor is making a new variable
+
+void Stack:: copy( const STack& other)
+{
+_top = other._top;
+_max=other._max;
+//_data=other._data;		//wrong will create a memory leak
+
+if (_data != nullptr)
+{
+delete[]_data;
+}
+
+_data= new int[_max];
+
+
+
+}
+
+]
+
+Stack::Stack( const stack& other) : _data(nullptr) 
+{
+copy(other);
+}
+
+
+
+
+pushing onto a full stack will cause an overflow error 
+
+if using a game, may have a stack of commands 
+
+[cmd 4, cmd 3, cmd 2, cmd 1, cmd 0] 
+
+ 
+void Student:: copy( Student& other)
+{
+dynamic_cast<const Person& <(*this)= dynamic_cast<const Person&> (other);
+_schoolName= other._schoolName;
+_major= other._major;
+}
+
+
+this -> Person::operator =(other) // instead of dynamic cast [Calls superclass]
+
+Exercise One involves Project one
+
+Fraction Fraction ::+= (const Fraction& other)
+{
+
+}
+
+Fraction Fraction ::-= (const Fraction& other)
+{
+}
+
+Fraction operator+ (const Fraction& f1, const Fraction& f2)
+{
+}
+
+
+//must change test code
+f17 += f37;
+result = f17 + f37;
+
+
+
+Fraction& Fraction :: operator + (const Fraction& f1, const Fraction& f2)
+{
+return Fraction (f1._num * f2._den + f1._den + f2._num, f1._den+f2._den);
+
+}
+
+Fraction :: Fraction (int num, int den) : _name(name), _den(den)
+{
+simplify();
+}
+
+Fraction :: num (int num);
+Fraction :: den (int den);
+
+Fraction :: numden (int num, int den);
